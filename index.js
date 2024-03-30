@@ -80,7 +80,8 @@ form.addEventListener("submit", (e) => {
 
   if (passwordConfirm.classList.contains("active")) {
     passworConfirmError.textContent = "password doesn't match!";
+  } else {
+    modal.showModal();
   }
-  modal.showModal();
   e.preventDefault();
 });
