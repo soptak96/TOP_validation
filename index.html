@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="" class="form" novalidate>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" minlength="6" required />
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="country">Country:</label>
+          <input
+            type="text"
+            id="country"
+            required
+            pattern="\b([A-Z][a-z]+)(?:\s[A-Z][a-z]+)*\b"
+          />
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="zip">Zip Code:</label>
+          <input type="text" id="zip" minlength="4" maxlength="9" required />
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            minlength="8"
+            maxlength="32"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <div>
+          <label for="password-confirm">Password Confirmation:</label>
+          <input
+            type="password"
+            id="password-confirm"
+            class="active"
+            required
+          />
+          <span class="error"></span>
+        </div>
+        <button type="submit">submit</button>
+      </form>
+    </div>
+    <dialog class="modal">
+      <div>
+        <p class="congo">Congratulation!</p>
+        <p>your form is submitted successfully!</p>
+      </div>
+    </dialog>
+  </body>
+</html>
